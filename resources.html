@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESOURCES</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* SECTION BACKGROUND */
+.resources-section{
+    padding:60px 40px;
+    background: linear-gradient(135deg, #0b2b5f, #a8dadc, #acb63e);
+}
+
+/* TITLE */
+.resources-section h1{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#1b1c1f;
+    animation: fadeDown 1s ease;
+}
+
+/* GRID */
+.resources-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+
+/* CARD */
+.resource-card{
+    background:#ffffffd9;
+    padding:25px;
+    border-radius:6px;
+    transition:0.4s;
+    cursor:pointer;
+
+    /* animation */
+    opacity:0;
+    transform:translateY(40px);
+    animation: cardFade 0.8s forwards;
+}
+
+/* STAGGER ANIMATION */
+.resource-card:nth-child(1){animation-delay:0.2s;}
+.resource-card:nth-child(2){animation-delay:0.4s;}
+.resource-card:nth-child(3){animation-delay:0.6s;}
+.resource-card:nth-child(4){animation-delay:0.8s;}
+.resource-card:nth-child(5){animation-delay:1s;}
+.resource-card:nth-child(6){animation-delay:1.2s;}
+.resource-card:nth-child(7){animation-delay:1.4s;}
+.resource-card:nth-child(8){animation-delay:1.6s;}
+
+/* HOVER */
+.resource-card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ICON */
+.icon{
+    font-size:40px;
+    color:#0b1d51;
+    margin-bottom:15px;
+}
+
+/* TITLE */
+.resource-card h3{
+    color:#2a5caa;
+    margin-bottom:10px;
+}
+
+/* TEXT */
+.resource-card p{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+/* LINK */
+.resource-card a{
+    text-decoration:none;
+    color:#2a5caa;
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.resource-card a:hover{
+    transform:translateX(5px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes cardFade{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .resources-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .resources-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="resources-section">
+
+    <h1>Resources</h1>
+
+    <div class="resources-grid">
+
+        <div class="resource-card">
+            <div class="icon">💬</div>
+            <h3>Contact our media team</h3>
+            <p>Reach our news team</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">🌱</div>
+            <h3>Investor relations</h3>
+            <p>Get in-depth financial information</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">🔧</div>
+            <h3>Logo usage</h3>
+            <p>How-to guides</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">🏆</div>
+            <h3>Awards</h3>
+            <p>See what we’ve won</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">🧠</div>
+            <h3>Insights blog</h3>
+            <p>Our latest thinking</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">🌐</div>
+            <h3>Company overview</h3>
+            <p>Facts about our company</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">⭐</div>
+            <h3>Executive bios</h3>
+            <p>Meet our leadership team</p>
+            <a href="#">Read more →</a>
+        </div>
+
+        <div class="resource-card">
+            <div class="icon">📄</div>
+            <h3>Annual report</h3>
+            <p>Our financial results</p>
+            <a href="#">Read more →</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
