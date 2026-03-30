@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge71 Exact Clone</title>
+
+<style>
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgb(82, 75, 75);
+  z-index: 1000;
+  border-bottom: 1px solid #453d3d;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.logo {
+  letter-spacing:4px;
+  font-weight:600;
+}
+
+.nav a {
+  margin-left: 35px;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  position: relative;
+}
+
+/* underline hover */
+.nav a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -6px;
+  background: black;
+  transition: 0.3s;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-slider-image-1.jpg') center/cover;
+  position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(11, 10, 10);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 64px;
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+/* SECTION */
+.section {
+  padding: 120px 0;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.product {
+  text-align: center;
+}
+
+.product__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product img {
+  width: 100%;
+  transition: transform 0.6s ease;
+}
+
+.product__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  color: rgb(12, 11, 11);
+  padding: 15px;
+  transform: translateY(100%);
+  transition: 0.4s;
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+.product:hover .product__overlay {
+  transform: translateY(0);
+}
+container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.card {
+  background: #efecec;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+  border-image: auto;
+}
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.card:hover {
+  transform: translateY(5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.card h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #f1e6e6;
+}
+
+/* FOOTER */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* FULL IMAGE */
+.full-image {
+  height: 70vh;
+  background: url('https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-slider-image-1.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-image h2 {
+  color: rgb(14, 13, 13);
+  font-size: 40px;
+}
+
+/* SPLIT */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+}
+
+.split__left {
+  background: url('https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-holder-image-1.jpg') center/cover;
+}
+.split__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  background: url('blob:https://web.whatsapp.com/c1f322c6-535f-410f-a89d-3b2e419b6baf')center/cover;
+}
+/* SECTION */
+.contact {
+  padding: 100px 10%;
+  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin: 20px 0 80px;
+}
+
+/* LAYOUT */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.contact-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contact-left h3 {
+  margin-bottom: 20px;
+}
+
+/* SOCIAL */
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.social span {
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
+}
+
+.social span:hover {
+  color: #8cc63f;
+}
+
+/* FORM */
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, textarea {
+  padding: 20px;
+  border: none;
+  background: #eee;
+  font-size: 16px;
+}
+
+textarea {
+  height: 180px;
+  resize: none;
+}
+
+/* BUTTON */
+button {
+  background: #8cc63f;
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #79b32f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .split__left {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+.map {
+  margin-top: 50px;
+}
+/* SECTION */
+.section {
+  padding: 80px 8%;
+  background: #f7f7f7;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.card {
+  text-align: left;
+}
+
+/* IMAGE */
+.card-img {
+  background: #eee;
+  padding: 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* DESCRIPTION */
+.card p {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+  <!-- Fonts close to original -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header__inner">
+    <div class="logo">BRIDGE</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">News</a>
+      <a href="#">Story</a>
+      <a href="#">Contact</a>
+      <a href="#">Locations</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__overlay"></div>
+  <div class="logo">
+    <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-slider-logo-image-1.png">
+  </div>
+  <div class="hero__content">
+    <h1>Seattle Organic Market</h1>
+    <p>We are passionate about providing you with a <br>wide range of fresh, healthy, certified organic whole foods.</p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <div class="container">
+    <div class="logo">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/home-content-vector-image-1.png">
+    </div>
+    <h2 class="section__title">Eat clean and green</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <div class="product__image">
+          <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-image-1.jpg">
+          <div class="product__overlay">View Product</div>
+        </div>
+        <h3>About our shop</h3>
+        <p>
+Eu augue ut lectus arcu bibendum. Sollicitudin aliquam ultrices sagittis orci a. Sapien necis sagittis aliquam malesuada bibendum arcu vitae elementum. Lectus arcu bibendum atusis variusvel quis blandit.</p>
+      </div>
+
+      <div class="product">
+        <div class="product__image">
+          <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-image-2.jpg">
+          <div class="product__overlay">View Product</div>
+        </div>
+        <h3>What we do</h3>
+        <p>Eu augue ut lectus arcu bibendum. Sollicitudin aliquam ultrices sagittis orci a. Sapien necis sagittis aliquam malesuada bibendum arcu vitae elementum. Lectus arcu bibendum atusis variusvel quis blandit.</p>
+      </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FULL IMAGE SECTION -->
+<section class="full-image">
+  <div class="full-image__content">
+    <h2>Our Health & Food Blog</h2>
+    <p>Vitae turpis massa sed elementum tempus feugiat scelerisque varius morbi.</p>
+  </div>
+  <div class="card">
+    <h3> Epic summer salad</h3>
+    <p>Tellus cras adipiscing enim eu turpis egestas. Pellentesque habitant morbi tristique senectus et netus. Duis at consectetur lorem donec massa. Malesuada fames ac turpis.</p>
+  </div>
+  <div class="card">
+    <h3>Garden to table</h3>
+    <p>Tellus cras adipiscing enim eu turpis egestas. Pellentesque habitant morbi tristique senectus et netus. Duis at consectetur lorem donec massa. Malesuada fames ac turpis.</p>
+  </div>
+  <div class="card">
+    <h3>Weekly meal plans</h3>
+    <p>Tellus cras adipiscing enim eu turpis egestas. Pellentesque habitant morbi tristique senectus et netus. Duis at consectetur lorem donec massa. Malesuada fames ac turpis.</p>
+  </div>
+</section>
+<section class="section">
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-img">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-image-4.jpg">
+      </div>
+      <h3>Best organic food</h3>
+      <p>Far etra diam sit amet nisl suscipit adipiscing.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-image-5.jpg">
+      </div>
+      <h3>Feel the nature</h3>
+      <p>Far etra diam sit amet nisl suscipit adipiscing.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-image-6.jpg">
+      </div>
+      <h3>Spices and herbs</h3>
+      <p>Far etra diam sit amet nisl suscipit adipiscing.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/main-home-image-7.jpg">
+      </div>
+      <h3>Healthy and easy</h3>
+      <p>Far etra diam sit amet nisl suscipit adipiscing.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SPLIT SECTION -->
+<section class="split">
+  <div class="split__left"></div>
+  <div class="split__right">
+    <h2>Organic Facts</h2>
+        <ul>
+            <li>Vitamins 50%</li>
+            <li> minarals 40%</li>
+            <li> protiens 60%</li>
+            <li>Calories 30%</li>
+        </ul>
+  </div>
+</section>
+<section class="brands">
+
+  <div class="brands-container">
+
+    <!-- LEFT SIDE -->
+    <div class="brands-left">
+      <h1>Brands & Clients</h1>
+
+      <div class="logo-grid">
+
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-1-hover.png">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-2-hover.png">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-3-hover.png">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-4-hover.png">
+        <br>
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-3-hover.png">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-4-hover.png">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-1-hover.png">
+        <img src="https://bridge71.qodeinteractive.com/wp-content/uploads/2016/07/clients-image-2-hover.png">
+
+<section class="contact">
+
+  <h1 class="title">Contact Our Store</h1>
+  <p class="subtitle">
+    Vitae turpis massa sed elementum tempus fet scelerisque varius morbi.
+  </p>
+
+  <div class="contact-container">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h2>Call our shop: <strong>555 786</strong></h2>
+
+      <p class="desc">
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh.
+        Urna molestie at elementum eu facilisis sed odio morbi.
+      </p>
+
+      <h3>Social links:</h3>
+
+      <div class="social">
+        <span>f</span>
+        <span>t</span>
+        <span>p</span>
+        <span>in</span>
+        <span>ig</span>
+        <span>dr</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+      <form>
+
+        <input type="text" placeholder="Your full name">
+        <input type="email" placeholder="Your e-mail adress">
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">Send message now</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
+<section class="map">
+     <iframe 
+    src="https://www.google.com/maps?q=Hyderabad&output=embed"
+    width="100%" 
+    height="500"
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Bridge Clone</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+
+/* BACKGROUND */
+body{
+  background:#f1f1f1;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#4CAF50;
+  color:white;
+  padding:15px;
+  position:fixed;
+  width:100%;
+  top:0;
+}
+
+/* MAIN CONTAINER */
+.container{
+  display:flex;
+  margin-top:70px;
+  padding:20px;
+  gap:20px;
+}
+
+/* LEFT */
+.left{
+  width:25%;
+}
+
+.profile{
+  background:white;
+  padding:20px;
+  text-align:center;
+}
+
+.profile img{
+  width:100px;
+  border-radius:50%;
+}
+
+/* MIDDLE */
+.middle{
+  width:50%;
+}
+
+.post{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+}
+
+.post img{
+  width:100%;
+  margin-top:10px;
+}
+
+/* RIGHT */
+.right{
+  width:25%;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+button{
+  background:#4CAF50;
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  My Social Website
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="profile">
+      <h3>My Profile</h3>
+      <img src="https://www.w3schools.com/w3images/avatar3.png">
+      <p>Designer, UI</p>
+      <p>London, UK</p>
+    </div>
+  </div>
+
+  <!-- MIDDLE -->
+  <div class="middle">
+
+    <div class="post">
+      <h3>John Doe</h3>
+      <p>This is a post</p>
+      <img src="https://www.w3schools.com/w3images/nature.jpg">
+    </div>
+
+    <div class="post">
+      <h3>Jane Doe</h3>
+      <p>Another post here</p>
+      <img src="https://www.w3schools.com/w3images/lights.jpg">
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <div class="card">
+      <h3>Upcoming Events</h3>
+      <img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%">
+      <p>Holiday Trip</p>
+      <button>Info</button>
+    </div>
+
+    <div class="card">
+      <h3>Friend Request</h3>
+      <img src="https://www.w3schools.com/w3images/avatar6.png" style="width:50%">
+      <p>John wants to connect</p>
+      <button>Accept</button>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

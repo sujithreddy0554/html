@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Task 2: Table Styles */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .table-title {
+            background-color: #4646c9; /* Light blue header */
+            text-align: center;
+            font-weight: bold;
+            color: #01060c;
+        }
+
+        /* Task 3: Form Styles */
+        .form-container {
+            border: 1px solid #0c0303;
+            padding: 20px;
+            width: 300px;
+            background-color: #e5d9d9;
+            margin-top: 10px;
+        }
+        .form-container h3 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 110px;
+        }
+        .form-group input, .form-group select {
+            flex: 1;
+            padding: 4px;
+            border: 1px solid #150808;
+        }
+        .submit-btn-container {
+            text-align: right;
+        }
+        .submit-btn-container button {
+            padding: 4px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #101010;
+            cursor: pointer;
+        }
+        .submit-btn-container button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+     <h1>HTML TASK:Event Regestration Page</h1>
+     <p>Create a simple webpage for an event registration using Lists,tables and forms.perfect for new coders</p>
+    
+     <h2>1. Create an Event <strong>HIGHLIGHTS LISTS</strong></h2>
+     <p>use an unordered list to list some event highlights.</p>
+
+     <h3>event highlights</h3>
+    <ul>
+        <li>Guest Speakers</li>
+        <li>Workshops</li>
+        <li>Networking</li>
+    </ul>
+      <h2>2. Create an event schedule Table</h2>
+      <p>Make a table show the event schedule</p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4" class="table-title">Event Schedule</th>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <th>Session</th>
+                <th>Speaker</th>
+                <th>Room</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12:00 AM</td>
+                <td>HTML TASK PROJECT</td>
+                <td>Sujith reddy</td>
+                <td>302</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>3. Create an event Regestration form</h2>
+          <p>Build a simple form for user regestration.</p>
+    <div class="form-container">
+        <h3>Register for the Event</h3>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="ticket">Choose Ticket:</label>
+                <select id="ticket" name="ticket">
+                    <option value="standard">Standard</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+
+            <div class="submit-btn-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASE STUDIESS</title>
+</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #a06e48;
+    }
+
+    section.container {
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #4f206d;
+      margin-bottom: 50px;
+    }
+
+    section.grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    section.card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      color: white;
+    }
+
+    section.card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section.overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+
+    span.category {
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    h2 {
+      margin: 10px 0 0;
+      font-size: 18px;
+      color: #00e0c6;
+    }
+  </style>
+</head>
+<body>
+
+<section class="container">
+  <h1>CASE STUDIES</h1>
+  <p class="subtitle">We help companies anticipate and act with insight and speed.</p>
+
+  <section class="grid">
+
+    <section class="card">
+      <img src="https://cognizant.scene7.com/is/image/cognizant/hp-cs-tile-bc-bs-north-carolina" alt="Healthcare">
+      <section class="overlay">
+        <span class="category">HEALTHCARE</span>
+        <h2>Blue Cross NC modernizes Medicare operations</h2>
+      </section>
+    </section>
+
+    <section class="card">
+      <img src="https://cognizant.scene7.com/is/image/cognizant/hp-cs-tile-storebrand" alt="Banking">
+      <section class="overlay">
+        <span class="category">BANKING</span>
+        <h2>Storebrand Bank embraces automation to deliver instant customer value</h2>
+      </section>
+    </section>
+
+    <section class="card">
+      <img src="https://cognizant.scene7.com/is/image/cognizant/hp-cs-tile-mead-johnson" alt="Consumer Goods">
+      <section class="overlay">
+        <span class="category">CONSUMER GOODS</span>
+        <h2>Mead Johnson Nutrition delivers global ERP transformation</h2>
+      </section>
+    </section>
+
+    <section class="card">
+      <img src="https://cognizant.scene7.com/is/image/cognizant/hp-cs-see-all-stories-1" alt="More Case Studies">
+      <section class="overlay">
+        <span class="category">CASE STUDIES</span>
+        <h2>Discover more about our work</h2>
+      </section>
+    </section>
+
+  </section>
+</section>
+
+</body>
+</html>

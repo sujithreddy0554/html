@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task list</title>
+</head>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgb(159, 209, 159),#c7b6, #e63946, #8d0b2f);
+    color: #222;
+}
+
+/* SECTION */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* TITLE */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    animation: fadeDown 1s ease-in-out;
+}
+
+/* SUBTEXT */
+.section-text {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    color: blue;
+    margin-bottom: 50px;
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+/* CARD CONTAINER */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+
+    /* animation */
+    transform: translateY(50px);
+    opacity: 0;
+    animation: cardFade 1s forwards;
+}
+
+/* delay each card */
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+
+/* CARD TITLE */
+.card h3 {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/* MAIN TITLE */
+.card h2 {
+    margin: 15px 0;
+}
+
+/* TEXT */
+.card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: #d90429;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.btn:hover {
+    background: #9d0208;
+    transform: scale(2s);
+}
+
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    transition: 0.4s;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECTION -->
+<section>
+    <h1> Task List's</h1>
+    <p class="section-text">
+        This website contains the successfully completed tasks of <b>LEVEL 2</b> as a part of the web-Development and designing internship at<b>Oasis infobyte</b>
+    </p>
+    <hr>
+    <section class="cards">
+        <section class="card">
+            <h3>TASK-1</h3>
+            <h2>Calculator</h2>
+            <p>
+                it takes a little skill to create a calculator with basic mathamatical functionalities using CSS,HTML and Javascript.
+            </p>
+            <a href="#" class="btn">View Task</a>
+        </section>
+        <section class="card">
+            <h3>TASK-2</h3>
+            <h2>Tribute page</h2>
+            <p>
+                Create a page for someone you admire using HTML and CSS.
+            </p>
+            <a href="#" class="btn">View Task</a>
+        </section>
+        <section class="card">
+            <h3>TASK-3</h3>
+            <h2>To-Do Wb app</h2>
+            <p>
+                Develop a basic TO-DO webapp that enables users to add daily tasks and Track completed and incomplete tasks.
+            </p>
+            <a href="#" class="btn">View Task</a>
+        </section>
+    </section>
+</section>
+
+</body>
+</html>

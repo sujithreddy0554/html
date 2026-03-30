@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognizant section UI</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f8f9fb;
+            color: #1a1a1a;
+        }
+        .container{
+            max-width: 1200px;
+            margin:auto;
+            padding: 40px 20px;    
+        }
+        .top-section{
+            display: flex;
+            gap:40px;
+            align-items:flex-start;
+        }
+        .text{
+            flex: 2;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .text a{
+            display: inline-block;
+            margin-top: 20px;
+            color:#0070c9;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        .metrics{
+            flex: 1;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            border-left: 1px solid #f7e8e8;
+            padding-left:20px;
+        }
+        .metric{
+            padding:20px;
+            border-bottom:1px solid#a49696;
+        }
+        .metric:nth-child(odd){
+            border-right: 1px solid #ddd;
+        }
+        .metric h2{
+            margin: 0;
+            color:#0070c9 ;
+
+        }
+        .metric p{
+            margin: 5px 0 0;
+            font-size:14px ;
+        }
+        .latest {
+            margin-top: 60px;
+        }
+        .latest h2{
+            color: #2a5caa;
+            margin-bottom:30px;
+        }
+        .icons{
+            display: flex;
+            justify-content:space-between ;
+            flex-wrap: wrap;
+        }
+        .icon-box{
+            text-align: center;
+            width:150px ;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            border: 2px solid #1a1a3d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #1a1a3d;
+            margin-bottom: 10px;
+        }
+        .icon-box span{
+            font-size: 14px;
+            color: #2d2d5f;
+        }
+        @media(max-width:900px){
+            .top-section{
+                flex-direction: column;
+            }
+            .metrics{
+                grid-template-columns: 1fr;
+                border-left:none;
+                padding-left: 0;
+            }
+            .metric{
+                border-right:none !important;
+            }
+            .icons{
+                justify-content:center;
+                gap:20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="top-section">
+        <section class="text">
+            <p>Cognizant is one of the worlds leading professional services companies,<br>Helping clients become data-enabled and data-driven in the digital era.<br>Our industry-based,consultative approach helps companies evolve into modern business.<br>
+                By Leading clients in Leveraging Technologies such as loT, artificial intelligence,<br>Digital engineering and cloud,we enable new business models.</p>
+                <a href="#"> Learn More</a>
+        </section>
+        <section class="metrics">
+            <section class="metric">
+                <h2>$21.1 billion</h2>
+                <p>FY25 Revenue</p>
+            </section>
+            <section class="metric">
+                <h2>$4.56</h2>
+                <p>FY25 GAAP EPS</p>
+                <P>$5.28 Adjusted EPS</P>
+            </section>
+            <section class="metric">
+                <h2>$2 billion</h2>
+                <p>Capital Returned in FY25</p>
+            </section>
+            <section class="metric">
+                <h2>351,600</h2>
+                <p>Employees as of Q4 2025</p>
+            </section>
+        </section>
+    </section>
+<hr>
+    <section class="latest">
+        <h2>Latest Quarter|Q4 2025</h2>
+        <section class="icons">
+            <section class="icon-box">
+                    <img src="https://img.icons8.com/ios/50/news.png">
+                    <p>Press Release</p></section>
+                <section class="icon-box">
+                     <img src="https://img.icons8.com/ios/50/presentation.png">
+                     <p>Presentation</p></section>
+                <section class="icon-box">
+                     <img src="https://img.icons8.com/ios/50/combo-chart.png">
+                     <p>Infographic</p>
+                </section>
+                <section class="icon-box">
+                     <img src="https://img.icons8.com/ios/50/video.png">
+                     <p>Webcast</p>
+                </section>
+                <section class="icon-box">
+                       <img src="https://img.icons8.com/ios/50/document.png">
+                       <p>Transcript</p>
+                </section>
+                <section class="icon-box">
+                    <img src="https://img.icons8.com/ios/50/file.png">
+                    <p>Form 10-K</p>
+                </section>
+
+            </section>
+        </section>
+    </section>
+    
+</body>
+</html>
